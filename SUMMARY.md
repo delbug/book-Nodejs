@@ -12,5 +12,3 @@
   - [01-Node中间件](./advanced/01-Node中间件.md)
   - [02-Node事件循环](./advanced/02-Node事件循环.md)
   - [03-Node中间层](./advanced/03-Node中间层.md)
-
-- [感谢](thanks/README.md)
