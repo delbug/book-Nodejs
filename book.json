@@ -22,8 +22,7 @@
     "github-buttons",
     "sharing-plus",
     "anchor-navigation-ex",
-    "favicon",
-    "insert-logo"
+    "favicon"
   ],
   "pluginsConfig": {
     "github": {
@@ -72,10 +71,6 @@
         "120x120": "./source/images/apple-touch-icon.jpg",
         "180x180": "./source/images/apple-touch-icon.jpg"
       }
-    },
-    "insert-logo": {
-      "url": "/felixbooks-gp19-node.js/images/node.js.jpg",
-      "style": "background: skyblue; width: 100%; height: 100%;"
     }
   }
 }
