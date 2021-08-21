@@ -1,0 +1,687 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06-socket编程 · 酱紫前端小册</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="酱紫">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../advanced/01-Node中间件.html" />
+    
+    
+    <link rel="prev" href="05-MongoDB.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"delbug","repo":"book-Nodejs","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Node.js基础.html">
+            
+                <a href="01-Node.js基础.html">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="01-Node.js基础.html">
+            
+                <a href="01-Node.js基础.html">
+            
+                    
+                    01-Node.js基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="02-yarn.html">
+            
+                <a href="02-yarn.html">
+            
+                    
+                    02-Yarn入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="03-Express.html">
+            
+                <a href="03-Express.html">
+            
+                    
+                    03-Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="04-Koa2.html">
+            
+                <a href="04-Koa2.html">
+            
+                    
+                    04-Koa2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="05-MongoDB.html">
+            
+                <a href="05-MongoDB.html">
+            
+                    
+                    05-MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="06-socket.html">
+            
+                <a href="06-socket.html">
+            
+                    
+                    06-socket编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../advanced/01-Node中间件.html">
+            
+                <a href="../advanced/01-Node中间件.html">
+            
+                    
+                    高级
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../advanced/01-Node中间件.html">
+            
+                <a href="../advanced/01-Node中间件.html">
+            
+                    
+                    01-Node中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../advanced/02-Node事件循环.html">
+            
+                <a href="../advanced/02-Node事件循环.html">
+            
+                    
+                    02-Node事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../advanced/03-Node中间层.html">
+            
+                <a href="../advanced/03-Node中间层.html">
+            
+                    
+                    03-Node中间层
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../thanks/">
+            
+                <a href="../thanks/">
+            
+                    
+                    感谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06-socket编程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#socket-&#x7F16;&#x7A0B;"><b></b>Socket &#x7F16;&#x7A0B;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;"><b></b>&#x4E00;&#x3001;&#x57FA;&#x4E8E; Net &#x6A21;&#x5757;&#x7684; Socket &#x7F16;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;"><b></b>&#x4E8C;&#x3001;&#x57FA;&#x4E8E; WebSocket &#x7684; Socket &#x7F16;&#x7A0B;</a></li><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;"><b></b>&#x4E09;&#x3001;&#x57FA;&#x4E8E; Socket.io &#x7684; Socket &#x7F16;&#x7A0B;</a></li></ul></ul></ul></div><a href="#socket-&#x7F16;&#x7A0B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="socket-&#x7F16;&#x7A0B;"><a name="socket-&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="socket-&#x7F16;&#x7A0B;" class="plugin-anchor" href="#socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>Socket &#x7F16;&#x7A0B;</h1>
+<h3 id="&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;"><a name="&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;" class="plugin-anchor" href="#&#x4E00;&#x3001;&#x57FA;&#x4E8E;-net-&#x6A21;&#x5757;&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x57FA;&#x4E8E; Net &#x6A21;&#x5757;&#x7684; Socket &#x7F16;&#x7A0B;</h3>
+<h4 id="11-serversocketjs"><a name="11-serversocketjs" class="anchor-navigation-ex-anchor" href="#11-serversocketjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="11-serversocketjs" class="plugin-anchor" href="#11-serversocketjs"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 ServerSocket.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;net&apos;</span>)
+
+<span class="hljs-keyword">const</span> server = <span class="hljs-keyword">new</span> net.createServer()
+
+<span class="hljs-keyword">let</span> clients = {}
+<span class="hljs-keyword">let</span> clientName = <span class="hljs-number">0</span>
+
+server.on(<span class="hljs-string">&apos;connection&apos;</span>, (client) =&gt; {
+  client.name = ++clientName
+  clients[client.name] = client
+
+  client.on(<span class="hljs-string">&apos;data&apos;</span>, (msg) =&gt; {
+    <span class="hljs-comment">// console.log(&apos;&#x5BA2;&#x6237;&#x7AEF;&#x4F20;&#x6765;&#xFF1A;&apos; + msg);</span>
+    broadcast(client, msg.toString())
+  })
+
+  client.on(<span class="hljs-string">&apos;error&apos;</span>, (e) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;client error&apos;</span> + e);
+    client.end()
+  })
+
+  client.on(<span class="hljs-string">&apos;close&apos;</span>, (data) =&gt; {
+    <span class="hljs-keyword">delete</span> clients[client.name]
+    <span class="hljs-built_in">console</span>.log(client.name + <span class="hljs-string">&apos; &#x4E0B;&#x7EBF;&#x4E86;&apos;</span>);
+  })
+})
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">broadcast</span>(<span class="hljs-params">client, msg</span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> clients) {
+    clients[key].write(client.name + <span class="hljs-string">&apos; &#x8BF4;&#xFF1A;&apos;</span> + msg)
+  }
+}
+
+server.listen(<span class="hljs-number">9000</span>, <span class="hljs-string">&apos;localhost&apos;</span>)
+</code></pre>
+<h4 id="12-clientsocketjs"><a name="12-clientsocketjs" class="anchor-navigation-ex-anchor" href="#12-clientsocketjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="12-clientsocketjs" class="plugin-anchor" href="#12-clientsocketjs"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 ClientSocket.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;net&apos;</span>)
+<span class="hljs-keyword">const</span> readline = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;readline&apos;</span>)
+
+<span class="hljs-keyword">var</span> port = <span class="hljs-number">9000</span>
+<span class="hljs-keyword">var</span> host = <span class="hljs-string">&apos;127.0.0.1&apos;</span>
+
+<span class="hljs-keyword">var</span> socket = <span class="hljs-keyword">new</span> net.Socket()
+
+socket.setEncoding = <span class="hljs-string">&apos;UTF-8&apos;</span>
+
+socket.connect(port, host, () =&gt; {
+  socket.write(<span class="hljs-string">&apos;hello.&apos;</span>)
+})
+
+socket.on(<span class="hljs-string">&apos;data&apos;</span>, (msg) =&gt; {
+  <span class="hljs-built_in">console</span>.log(msg.toString())
+  say()
+})
+
+socket.on(<span class="hljs-string">&apos;error&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error&apos;</span> + err);
+})
+
+socket.on(<span class="hljs-string">&apos;close&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;connection closeed&apos;</span>);
+})
+
+<span class="hljs-keyword">const</span> r1 = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">say</span>(<span class="hljs-params"></span>) </span>{
+  r1.question(<span class="hljs-string">&apos;&#x8BF7;&#x8F93;&#x5165;&#xFF1A;\n&apos;</span>, (inputMsg) =&gt; {
+    <span class="hljs-keyword">if</span> (inputMsg != <span class="hljs-string">&apos;bye&apos;</span>) {
+      <span class="hljs-comment">// socket.write(inputMsg + &apos;\n&apos;)</span>
+    } <span class="hljs-keyword">else</span> {
+      socket.destroy()
+      r1.close()
+    }
+  })
+}
+</code></pre>
+<h3 id="&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;"><a name="&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;" class="plugin-anchor" href="#&#x4E8C;&#x3001;&#x57FA;&#x4E8E;-websocket-&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x57FA;&#x4E8E; WebSocket &#x7684; Socket &#x7F16;&#x7A0B;</h3>
+<h4 id="21-websocketserverjs"><a name="21-websocketserverjs" class="anchor-navigation-ex-anchor" href="#21-websocketserverjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="21-websocketserverjs" class="plugin-anchor" href="#21-websocketserverjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 WebSocketServer.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> WebSocket = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ws&apos;</span>)
+<span class="hljs-keyword">const</span> ws = <span class="hljs-keyword">new</span> WebSocket.Server({ port: <span class="hljs-number">8081</span> })
+
+<span class="hljs-keyword">let</span> clients = {}
+<span class="hljs-keyword">let</span> clientName = <span class="hljs-number">0</span>
+
+ws.on(<span class="hljs-string">&apos;connection&apos;</span>, (client) =&gt; {
+
+  client.name = ++clientName
+  clients[client.name] = client
+
+  client.on(<span class="hljs-string">&apos;message&apos;</span>, (msg) =&gt; {
+    broadcast(client, msg)
+  })
+
+  client.on(<span class="hljs-string">&apos;close&apos;</span>, () =&gt; {
+    <span class="hljs-keyword">delete</span> clients[client.name]
+    <span class="hljs-built_in">console</span>.log(client.name + <span class="hljs-string">&apos; &#x79BB;&#x5F00;&#x4E86;~&apos;</span>)
+  })
+})
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">broadcast</span>(<span class="hljs-params">client, msg</span>) </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> clients) {
+    clients[key].send(client.name + <span class="hljs-string">&apos; &#x8BF4;&#xFF1A;&apos;</span> + msg)
+  }
+}
+</code></pre>
+<h4 id="22-indexhtml"><a name="22-indexhtml" class="anchor-navigation-ex-anchor" href="#22-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a><a name="22-indexhtml" class="plugin-anchor" href="#22-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 index.html</h4>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>WebSocket<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;WsClient.js&quot;</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>gp &#x4EA4;&#x6D41;&#x533A;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;overflow-y: scroll; width: 400px; height: 300px; border: solid 1px #000&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;msg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 200px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x63D0;&#x4EA4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>)
+      .addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> msg2 = msg.value
+        ws.send(msg2) <span class="hljs-comment">// &#x6838;&#x5FC3;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x8868;&#x5355;&#x91CC;&#x7684;&#x6570;&#x636E;&#x63D0;&#x4EA4;&#x7ED9;server&#x7AEF;</span>
+        msg.value = <span class="hljs-string">&apos;&apos;</span>
+      }, <span class="hljs-literal">false</span>)
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="23-wsclientjs"><a name="23-wsclientjs" class="anchor-navigation-ex-anchor" href="#23-wsclientjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="23-wsclientjs" class="plugin-anchor" href="#23-wsclientjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 WsClient.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> ws = <span class="hljs-keyword">new</span> WebSocket(<span class="hljs-string">&apos;ws://localhost:8081/&apos;</span>)
+
+ws.onopen = () =&gt; {
+  ws.send(<span class="hljs-string">&apos;&#x5927;&#x5BB6;&#x597D;!&apos;</span>)
+}
+
+ws.onmessage = (msg) =&gt; {
+  <span class="hljs-keyword">const</span> content = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;content&apos;</span>)
+  content.innerHTML += msg.data + <span class="hljs-string">&apos;&lt;br/&gt;&apos;</span>
+}
+
+ws.onerror = (err) =&gt; {
+  <span class="hljs-built_in">console</span>.log(err);
+}
+
+ws.onclose = () =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;closed~&apos;</span>);
+}
+</code></pre>
+<h3 id="&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;"><a name="&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;" class="plugin-anchor" href="#&#x4E09;&#x3001;&#x57FA;&#x4E8E;-socketio-&#x7684;-socket-&#x7F16;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x57FA;&#x4E8E; Socket.io &#x7684; Socket &#x7F16;&#x7A0B;</h3>
+<h4 id="31-socketioserverjs"><a name="31-socketioserverjs" class="anchor-navigation-ex-anchor" href="#31-socketioserverjs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="31-socketioserverjs" class="plugin-anchor" href="#31-socketioserverjs"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 SocketIoServer.js</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">var</span> app = express();
+<span class="hljs-keyword">var</span> server = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>).Server(app);
+<span class="hljs-keyword">var</span> io = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;socket.io&apos;</span>)(server);
+
+<span class="hljs-comment">// app.use(express.static(__dirname + &apos;/client&apos;))</span>
+
+io.on(<span class="hljs-string">&apos;connection&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">socket</span>) </span>{
+  <span class="hljs-comment">// setInterval(function () {</span>
+  <span class="hljs-comment">//   socket.emit(&apos;list&apos;, &apos;abc&apos;)</span>
+  <span class="hljs-comment">// }, 1000)</span>
+  <span class="hljs-comment">// socket.broadcast.emit(&apos;list&apos;, &apos;test&apos;);</span>
+  <span class="hljs-comment">// socket.on(&apos;backend&apos;, (msg) =&gt; {</span>
+  <span class="hljs-comment">//   console.log(msg);</span>
+  <span class="hljs-comment">// })</span>
+
+  socket.on(<span class="hljs-string">&apos;receive&apos;</span>, (msg) =&gt; {
+    socket.broadcast.emit(<span class="hljs-string">&apos;message&apos;</span>, msg);
+  })
+});
+
+server.listen(<span class="hljs-number">8082</span>, <span class="hljs-string">&apos;10.9.49.156&apos;</span>);
+</code></pre>
+<h4 id="32-indexhtml"><a name="32-indexhtml" class="anchor-navigation-ex-anchor" href="#32-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a><a name="32-indexhtml" class="plugin-anchor" href="#32-indexhtml"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 index.html</h4>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;ie=edge&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>socket.io<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;socket.io.js&quot;</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>gp &#x4EA4;&#x6D41;&#x533A;<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;name&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;overflow-y: scroll; width: 400px; height: 300px; border: solid 1px #000&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;msg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 200px;&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#x63D0;&#x4EA4;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> socket = io.connect(<span class="hljs-string">&apos;http://10.9.49.156:8082&apos;</span>);
+    <span class="hljs-keyword">const</span> content = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;content&apos;</span>)
+    <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;#submit&apos;</span>)
+      .addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+        <span class="hljs-keyword">var</span> msg2 = msg.value
+        socket.emit(<span class="hljs-string">&apos;receive&apos;</span>, msg2) <span class="hljs-comment">// &#x6838;&#x5FC3;&#x4EE3;&#x7801;</span>
+        msg.value = <span class="hljs-string">&apos;&apos;</span>
+        content.innerHTML += msg2 + <span class="hljs-string">&apos;&lt;br/&gt;&apos;</span>
+      }, <span class="hljs-literal">false</span>)
+
+      socket.on(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>)</span>{
+        content.innerHTML += msg + <span class="hljs-string">&apos;&lt;br/&gt;&apos;</span>
+      })
+  </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h4 id="socketiojs"><a name="socketiojs" class="anchor-navigation-ex-anchor" href="#socketiojs"><i class="fa fa-link" aria-hidden="true"></i></a><a name="socketiojs" class="plugin-anchor" href="#socketiojs"><i class="fa fa-link" aria-hidden="true"></i></a>socket.io.js</h4>
+<pre><code class="lang-s"># &#x5B89;&#x88C5;&#x5305;
+npm i socket.io
+# &#x5728; node_modules/socket.io-client/dist/ &#x627E;&#x5230; socket.io.js
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="05-MongoDB.html" class="navigation navigation-prev " aria-label="Previous page: 05-MongoDB">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../advanced/01-Node中间件.html" class="navigation navigation-next " aria-label="Next page: 高级">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06-socket编程","level":"1.2.6","depth":2,"next":{"title":"高级","level":"1.3","depth":1,"path":"advanced/01-Node中间件.md","ref":"./advanced/01-Node中间件.md","articles":[{"title":"01-Node中间件","level":"1.3.1","depth":2,"path":"advanced/01-Node中间件.md","ref":"./advanced/01-Node中间件.md","articles":[]},{"title":"02-Node事件循环","level":"1.3.2","depth":2,"path":"advanced/02-Node事件循环.md","ref":"./advanced/02-Node事件循环.md","articles":[]},{"title":"03-Node中间层","level":"1.3.3","depth":2,"path":"advanced/03-Node中间层.md","ref":"./advanced/03-Node中间层.md","articles":[]}]},"previous":{"title":"05-MongoDB","level":"1.2.5","depth":2,"path":"basics/05-MongoDB.md","ref":"./basics/05-MongoDB.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex","favicon","insert-logo","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/delbug/book-Nodejs"},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"github-buttons":{"buttons":[{"user":"delbug","repo":"book-Nodejs","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"insert-logo":{"style":"background: skyblue; width: 100%; height: 100%;","url":"/felixbooks-gp19-node.js/images/node.js.jpg"}},"theme":"default","author":"酱紫","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"酱紫前端小册","language":"zh-hans","links":{},"gitbook":"3.2.3","description":"Node.js复习"},"file":{"path":"basics/06-socket.md","mtime":"2021-08-21T05:56:47.328Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-21T06:40:40.670Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
