@@ -27,7 +27,7 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": ""
+      "url": "https://github.com/delbug/book-Nodejs"
     },
     "github-buttons": {
       "buttons": [{
