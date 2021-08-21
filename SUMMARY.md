@@ -1,7 +1,5 @@
 # Summary
 
-- [前言](README.md)
-
 - [基础](./basics/01-Node.js基础.md)
   - [01-Node.js基础](./basics/01-Node.js基础.md)
   - [02-Yarn入门](./basics/02-yarn.md)
