@@ -395,10 +395,10 @@ $ npm config set foo:port 80
 
 ```
 # 这样适合安装公司内部的git服务器上的项目
-npm install git+https://git@github.com:lurongtao/gp-project.git
+npm install git+https://git@github.com:delbug/book-Nodejs
 
 # 或者以ssh的方式
-npm install git+ssh://git@github.com:lurongtao/gp-project.git
+npm install git+ssh://git@github.com:delbug/book-Nodejs
 ```
 
 #### 2.11 cross-env 使用
